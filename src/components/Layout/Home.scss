@@ -1,0 +1,76 @@
+// src/components/Layout/Home.scss
+
+// 1. Define Variables for easy theme updates
+$primary-pink: #ff69b4;
+$secondary-pink: #fce4ec;
+$dark-grey: #333333;
+$white: #ffffff;
+$font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+// 2. Main Layout Styles
+.home-container {
+  font-family: $font-stack;
+  color: $dark-grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+
+  // Hero Section
+  .hero-section {
+    text-align: center;
+    background-color: $secondary-pink;
+    padding: 50px 20px;
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 30px;
+
+    h1 {
+      color: $primary-pink;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .cta-button {
+      background-color: $primary-pink;
+      color: $white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken($primary-pink, 10%);
+      }
+    }
+  }
+
+  // Services Preview Grid
+  .services-preview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+
+    .service-card {
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.2s;
+
+      &:hover {
+        transform: translateY(-5px);
+        border-color: $primary-pink;
+      }
+    }
+  }
+}

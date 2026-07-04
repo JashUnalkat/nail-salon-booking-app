@@ -1,0 +1,144 @@
+// src/components/Auth/AuthForm.scss
+
+// Define our spa-themed colors
+$brand-pink: #ff7675; // A warm, inviting accent color
+$brand-pink-hover: #d63031;
+$bg-light: #fdfdfd; // Warm white background
+$text-dark: #2d3436;
+$text-helper: #636e72;
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; // Fill most of the viewport
+  padding: 20px;
+  background-color: #f9f9fb; // Very light grey back-drop
+}
+
+.auth-card {
+  background: $bg-light;
+  padding: 2.5rem;
+  border-radius: 16px; // Soft rounded corners
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08); // Modern, soft shadow
+  width: 100%;
+  max-width: 450px; // Standard form width
+  border: 1px solid #eaeaea;
+  text-align: center;
+
+  h2 {
+    font-family: 'Segoe UI', system-ui, sans-serif; // Standard elegant font
+    font-size: 1.8rem;
+    color: $text-dark;
+    margin-bottom: 0.5rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+    color: $text-dark;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+
+  p {
+    color: $text-helper;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+
+  .auth-error {
+    background-color: #ffeaea;
+    color: #d63031;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ffcccc;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+.input-group {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+
+  label {
+    font-weight: 600;
+    color: $text-dark;
+    margin-bottom: 0.4rem;
+    font-size: 0.85rem;
+  }
+
+  input {
+    padding: 12px;
+    border: 1.5px solid #dfe6e9; // Neutral border
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease; // Smooth transitions
+
+    &:focus {
+      border-color: $brand-pink; // Our spa accent color
+      outline: none;
+      // Soft glow effect on focus
+      box-shadow: 0 0 0 3px rgba($brand-pink, 0.2); 
+    }
+  }
+}
+
+.auth-submit-btn {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background-color: $brand-pink; // Main action color
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background-color: $brand-pink-hover; // Darker pink on hover
+  }
+
+  &:disabled {
+    background-color: #fab1a0; // Muted color when loading
+    cursor: not-allowed;
+  }
+}
+
+.auth-helpers {
+  margin-top: 2rem;
+  border-top: 1px solid #eaeaea; // Divider line
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+
+  a {
+    font-size: 0.9rem;
+    color: $brand-pink; // Keep the color theme
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline; // Classic hover state
+    }
+  }
+
+  .auth-helper-row {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: $text-helper;
+  }
+}
+
+// Media Query for mobile screens
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 1.5rem;
+  }
+}

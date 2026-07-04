@@ -1,0 +1,12 @@
+/* src/components/Appointment/Appointment.scss */
+.appointment-manager {
+  padding: 20px;
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+  }
+}

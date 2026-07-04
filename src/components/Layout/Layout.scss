@@ -1,0 +1,61 @@
+// src/components/Layout/Layout.scss
+
+// 1. Define Variables
+$nav-height: 70px;
+$primary-pink: #ff69b4;
+$white: #ffffff;
+$shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+// 2. Global Layout Container
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; // Ensures footer stays at bottom
+
+  // Navigation Bar
+  .navbar {
+    height: $nav-height;
+    background-color: $white;
+    box-shadow: $shadow;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      
+      a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        
+        &:hover {
+          color: $primary-pink;
+        }
+      }
+    }
+  }
+
+  // Main Content Area
+  .main-content {
+    flex: 1; // Fills available space
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  // Footer
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #eee;
+    font-size: 0.9rem;
+  }
+}
